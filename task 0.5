@@ -1,0 +1,41 @@
+public class Main {
+    public static void main(String[] args) {
+        Worker[] workArray = new Worker[5];
+        workArray[0] = new Worker("Ivanov Sasha", "engineer", "ivivan@mailbox.com", "892312312", 65500, 42);
+        workArray[1] = new Worker("Sidorov Sasha", "programmer", "sidorov@mailbox.com", "894382812", 155500, 32);
+        workArray[2] = new Worker("Petrov Egor", "accountant", "petrov@mailbox.com", "895315642", 85500, 34);
+        workArray[3] = new Worker("Parker Igor", "web designer", "parker@mailbox.com", "892312312", 95500, 26);
+        workArray[4] = new Worker("Hero Peter", "analyst", "hero@mailbox.com", "898314518", 100000, 44);
+        for (int i = 0; i < workArray.length; i++)
+            if (workArray[i].getAge()>40)
+            System.out.println(workArray[i]);
+    }
+}
+class Worker {
+    private String name;
+    private String position;
+    private String email;
+    private String phone;
+    private int salary;
+    private int age;
+    
+    public Worker(String name, String position, String email, String phone, int salary, int age) {
+        this.name = name;
+        this.position = position;
+        this.email = email;
+        this.phone = phone;
+        this.salary = salary;
+        this.age = age;
+    }
+    public int getAge() {
+        return age;
+    }
+    public String toString() {
+        return(name+ "\n-" 
+        +position+ "\n-" 
+        +email+ "\n-" 
+        +phone+ "\n-" 
+        +salary+ "\n-" 
+        +age+ "\n-"); 
+    }
+}
